@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "dfx": "0.7.0",
+  "canisters": {
+    "actor_hello": {
+      "type": "motoko",
+      "main": "src/actor_hello/main.mo"
+    },
+    "actor_hello_assets": {
+      "type": "assets",
+      "source": [
+        "src/actor_hello_assets/assets"
+      ],
+      "dependencies": [
+        "actor_hello"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
